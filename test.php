@@ -3,7 +3,7 @@
 require_once 'Aes256.php';
 $key = "7snx886/cTK+6CcPBGt8uEKgu9ZG3rOPNNsjA6IjVGQ=";
 
-$Lotto = new Aes256($key);
+$Aes = new Aes256($key);
 //test data here
 $array = array(
 	'id'=>543,
@@ -12,7 +12,7 @@ $array = array(
 );
 $data = json_encode($array);
 
-$res = $Lotto->request($data,'http://somedomain.com/kaburu/api/v1/endpoint');
+$res = $Aes->request($data,'http://somedomain.com/kaburu/api/v1/endpoint');
 print_r($res);
 
 ?>
